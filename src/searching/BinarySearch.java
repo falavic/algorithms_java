@@ -19,7 +19,7 @@ public class BinarySearch {
 
         for(;index != 0 && index != list.length-1;) {
             if(list[index] == item) {
-                result = index; // store the index of item
+                result = index;
                 break;
             } else if(item < list[index]) {
                 index = index / 2;
@@ -32,10 +32,10 @@ public class BinarySearch {
     }
 
     public static void main(String[] args) {
-        int[] list = {1, 2, 3, 4, 5};
-        int item = 3;
-        int result = binarySearch(item, list);
+        int[] list = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int item = 10;
 
+        int result = binarySearch(item, list);
         if(result != -1) {
             logger.info("element found at index: " + result);
         } else {
